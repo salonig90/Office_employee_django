@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <table border ="1"  cellspacing = "0" >
+    <tr>
+        <td>Employee No.</td>
+        <td>Employee Name</td>
+        <td>Employee Salary</td>
+        <td>Employee Address </td>
+        <td>Employee Email</td>
+        <td>Action</td>
+    </tr> 
+    
+
+    {% for Employee in emp %}
+    <tr>
+        <td>{{Employee.eno}}</td>
+        <td>{{Employee.ename}}</td>
+        <td>{{Employee.esal}}</td>
+        <td>{{Employee.eadd}}</td>
+        <td>{{Employee.email}}</td>
+
+        <td><a href="{% url 'update_employee' Employee.id %}">Update</a>|   
+            <a href="{% url 'delete_employee' Employee.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

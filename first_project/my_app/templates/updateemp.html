@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addemp</title>
+</head>
+<body>
+    <h1>EDIT Employee Details</h1>
+     <form method= "post">
+        {% csrf_token %} 
+        <div>
+            <label for="FormGroup1" class="form-label">Employee No.</label>
+            <input type="number" name = "eno" value ={{emp.eno}} class ="form-control" id = "FormGroup1" placeholder="Enter Employee no." >
+        </div>
+        <div>
+            <label for="FormGroup2" class="form-label">FirstName</label>
+            <input type="text" name = "ename" value="{{emp.ename}}" class="form-control" id ="FormGroup2" placeholder="Enter First Name">
+        </div>
+        <div>
+            <label for="FormGroup3" class="form-label">Salary</label>
+            <input type="number" name="esal" value="{{emp.esal}}" class="form-control" id="FormGroup3" placeholder="Enter your Salary">
+        </div>
+        <div>
+            <label for="FormGroup4" class="form-label">Address</label>
+            <input type="text" name = "eadd" value="{{emp.eadd}}" class="form-control" id="FormGroup4" placeholder="Enter Address">
+        </div>
+        <div>
+            <label for="FormGroup5" class="form-label">Email</label>
+            <input type="email" name= "email" value="{{emp.email}}" class="form-control" id="FormGroup5" placeholder="Enter Gmail">
+        </div>
+        <input type="Submit" value="Submit" >
+     </form>
+
+
+</body>
+</html>
